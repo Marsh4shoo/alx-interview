@@ -1,4 +1,4 @@
-# UTF-8 Validation
+# UTF-8 Validation By Marshal Zvinoira
 
 ## Description
 This project contains a Python script to validate UTF-8 encoding.
