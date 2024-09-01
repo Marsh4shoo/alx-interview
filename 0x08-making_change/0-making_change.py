@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def makeChange(coins, total):
     # Step 1: Base case checks
     if total <= 0:
@@ -17,4 +18,10 @@ def makeChange(coins, total):
     
     # Step 5: Check if the amount was achievable
     return dp[total] if dp[total] != float('inf') else -1
+=======
+#!/usr/bin/python3
+
+def makeChange(coins, total):
+    # Implementation goes here
+>>>>>>> 0af2842a7538931dc1a8967c15ebcde466767de4
 

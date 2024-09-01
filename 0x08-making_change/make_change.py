@@ -1,4 +1,5 @@
 def makeChange(coins, total):
+<<<<<<< HEAD
     """
     Determine the fewest number of coins needed to meet a given amount total.
 
@@ -29,4 +30,22 @@ if __name__ == "__main__":
     print(makeChange([1256, 54, 48, 16, 102], 1453))  # Expected output: -1
     print(makeChange([1, 3, 4], 6))                   # Expected output: 2
     print(makeChange([2], 3))                         # Expected output: -1
+=======
+    if total <= 0:
+        return 0
+    coins.sort(reverse=True)
+    num_coins = 0
+    for coin in coins:
+        while total >= coin:
+            total -= coin
+            num_coins += 1
+        if total == 0:
+            break
+    return num_coins if total == 0 else -1
+
+print(makeChange([1, 2, 5], 11))  # Should return 3 (11 = 5 + 5 + 1)
+print(makeChange([2], 3))         # Should return -1 (impossible to make 3 with only 2)
+print(makeChange([1], 0))         # Should return 0 (0 coins needed for 0 total)
+print(makeChange([1, 5, 10, 25], 30))  # Should return 2 (30 = 25 + 5)
+>>>>>>> 0af2842a7538931dc1a8967c15ebcde466767de4
 
