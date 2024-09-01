@@ -1,37 +1,25 @@
+#!/usr/bin/python3
 def makeChange(coins, total):
-<<<<<<< HEAD
     """
     Determine the fewest number of coins needed to meet a given amount total.
 
-    Args:
-    coins (list): List of the values of the coins in your possession.
-    total (int): The total amount to be made.
-
-    Returns:
-    int: Minimum number of coins needed to make the total amount, or -1 if it cannot be made.
+    :param coins: List of integers representing coin denominations.
+    :param total: Integer, the total amount to make change for.
+    :return: Minimum number of coins needed to meet the total, or -1 if not possible.
     """
     if total <= 0:
         return 0
 
-    # Initialize an array with a large number (infinity), as we want to minimize it
+    # Initialize an array of size (total + 1) with a large number representing infinity
     dp = [float('inf')] * (total + 1)
-    dp[0] = 0  # 0 coins are needed to make total of 0
+    dp[0] = 0  # Base case: no coins needed to make total 0
 
+    # Iterate through each coin
     for coin in coins:
-        for i in range(coin, total + 1):
-            dp[i] = min(dp[i], dp[i - coin] + 1)
-
-    # Return -1 if it's not possible to make the total with the given coins
+        # Update the dp array for each amount that can be reached by the current coin
+        for amount in range(coin, total + 1):
+            dp[amount] = min(dp[amount], dp[amount - coin] + 1)
+    
+    # Return the result, or -1 if it's not possible to make the total
     return dp[total] if dp[total] != float('inf') else -1
-
-
-# Test cases to validate the function
-if __name__ == "__main__":
-    print(makeChange([1256, 54, 48, 16, 102], 1453))  # Expected output: -1
-    print(makeChange([1, 3, 4], 6))                   # Expected output: 2
-    print(makeChange([2], 3))                         # Expected output: -1
-=======
-    if total <= 0:
-        return 0
-    coins.sort(reverse=True)
 
