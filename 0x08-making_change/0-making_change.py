@@ -1,27 +1,37 @@
-<<<<<<< HEAD
 def makeChange(coins, total):
-    # Step 1: Base case checks
+<<<<<<< HEAD
+    """
+    Determine the fewest number of coins needed to meet a given amount total.
+
+    Args:
+    coins (list): List of the values of the coins in your possession.
+    total (int): The total amount to be made.
+
+    Returns:
+    int: Minimum number of coins needed to make the total amount, or -1 if it cannot be made.
+    """
     if total <= 0:
         return 0
-    
-    # Step 2: Initialize a DP array to store minimum coins for each amount
-    # Use a high value (infinity) to indicate that the amount is initially not achievable
-    dp = [float('inf')] * (total + 1)
-    dp[0] = 0  # No coins needed to achieve 0 total
-    
-    # Step 3: Fill the DP array
-    for amount in range(1, total + 1):
-        for coin in coins:
-            if coin <= amount:
-                # Step 4: Update DP value for the current amount
-                dp[amount] = min(dp[amount], dp[amount - coin] + 1)
-    
-    # Step 5: Check if the amount was achievable
-    return dp[total] if dp[total] != float('inf') else -1
-=======
-#!/usr/bin/python3
 
-def makeChange(coins, total):
-    # Implementation goes here
->>>>>>> 0af2842a7538931dc1a8967c15ebcde466767de4
+    # Initialize an array with a large number (infinity), as we want to minimize it
+    dp = [float('inf')] * (total + 1)
+    dp[0] = 0  # 0 coins are needed to make total of 0
+
+    for coin in coins:
+        for i in range(coin, total + 1):
+            dp[i] = min(dp[i], dp[i - coin] + 1)
+
+    # Return -1 if it's not possible to make the total with the given coins
+    return dp[total] if dp[total] != float('inf') else -1
+
+
+# Test cases to validate the function
+if __name__ == "__main__":
+    print(makeChange([1256, 54, 48, 16, 102], 1453))  # Expected output: -1
+    print(makeChange([1, 3, 4], 6))                   # Expected output: 2
+    print(makeChange([2], 3))                         # Expected output: -1
+=======
+    if total <= 0:
+        return 0
+    coins.sort(reverse=True)
 
