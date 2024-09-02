@@ -17,9 +17,5 @@ def makeChange(coins, total):
     # Iterate through each coin
     for coin in coins:
         # Update the dp array for each amount that can be reached by the current coin
-        for amount in range(coin, total + 1):
-            dp[amount] = min(dp[amount], dp[amount - coin] + 1)
-    
-    # Return the result, or -1 if it's not possible to make the total
-    return dp[total] if dp[total] != float('inf') else -1
+        for amount in
 
