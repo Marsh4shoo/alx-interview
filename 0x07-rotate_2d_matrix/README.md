@@ -1,49 +1,34 @@
 0x07. Rotate 2D Matrix By Marshal Zvinoira
 
-Concepts Needed:
-Matrix Representation in Python:
+# Rotate 2D Matrix
 
-Understanding how 2D matrices are represented using lists of lists in Python.
-Accessing and modifying elements in a 2D matrix.
-In-place Operations:
+## Description
+This project provides a function to rotate a given n x n 2D matrix 90 degrees clockwise in place.
 
-Performing operations on data without creating a copy of the data structure.
-The importance of minimizing space complexity by modifying the matrix in place.
-Matrix Transposition:
+## Function
+`rotate_2d_matrix(matrix)`
 
-Understanding the concept of transposing a matrix (swapping rows and columns).
-Implementing matrix transposition as a step in the rotation process.
-Reversing Rows in a Matrix:
+### Parameters
+- `matrix`: A list of lists where each sublist represents a row of the matrix.
 
-Manipulating rows of a matrix by reversing their order as part of the rotation process.
-Nested Loops:
+### Returns
+- None: The matrix is modified in place.
 
-Using nested loops to iterate through 2D data structures like matrices.
-Modifying elements within nested loops to achieve the desired rotation.
-Resources:
-Python Official Documentation:
+## Usage
+You can test the function using the provided `main_0.py` script:
 
-Data Structures (list comprehensions, nested list comprehension)
-More on Lists
-GeeksforGeeks Articles:
+```python
+#!/usr/bin/python3
+"""
+Test 0x07 - Rotate 2D Matrix
+"""
+rotate_2d_matrix = __import__('0-rotate_2d_matrix').rotate_2d_matrix
 
-Inplace rotate square matrix by 90 degrees
-Transpose a matrix in Single line in Python
-TutorialsPoint:
+if __name__ == "__main__":
+    matrix = [[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]]
 
-Python Lists for basics of list manipulation in Python.
-By understanding these concepts and utilizing the provided resources, you will be able to approach the problem methodically, first transposing the matrix and then reversing each row to achieve a 90-degree clockwise rotation. This project not only tests your ability to manipulate 2D matrices but also challenges you to think about optimizing your solution to operate in-place, thus improving their problem-solving and algorithmic thinking skills in Python.
+    rotate_2d_matrix(matrix)
+    print(matrix)
 
-Additional Resources
-Mock Technical Interview
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.10)
-All your files should end with a new line
-The first line of all your files should be exactly #!/usr/bin/python3
-A README.md file, at the root of the folder of the project, is mandatory
-Your code should use the pycodestyle style (version 2.8.0)
-You are not allowed to import any module
-All modules and functions must be documented
-All your files must be executable
