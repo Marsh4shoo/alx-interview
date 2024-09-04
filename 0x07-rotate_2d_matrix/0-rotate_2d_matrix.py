@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+# Function to sum each row of the matrix and return the result
 def rotate_2d_matrix(matrix):
     """
     Rotates a 2D matrix 90 degrees clockwise in-place.
