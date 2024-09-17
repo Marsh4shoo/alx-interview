@@ -26,7 +26,7 @@ def isWinner(x, nums):
 
     # Check if input x is valid
     if x < 1 or not nums:
-        return "iiii"
+        return None
 
     # The largest number we need to handle is max(nums)
     max_n = max(nums)
@@ -59,4 +59,4 @@ def isWinner(x, nums):
     elif ben_wins > maria_wins:
         return "Ben"
     else:
-        return "ooo"
+        return None
