@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
-def isWinner(x, nums):
-    """
+"""
     Determines the winner of a game played by Maria and Ben.
 
     Args:
@@ -12,7 +10,10 @@ def isWinner(x, nums):
     str: Name of the player with the most wins ('Maria' or 'Ben'). If it's a tie, returns None.
     """
 
-    # Helper function to generate prime numbers up to max_n using the Sieve of Eratosthenes
+def isWinner(x, nums):
+    """
+    Helper function to generate prime numbers up to max_n using the Sieve of Eratosthenes
+"""
     def sieve_of_eratosthenes(max_n):
         primes = [True] * (max_n + 1)  # Initialize all numbers as potential primes
         primes[0] = primes[1] = False  # 0 and 1 are not primes
