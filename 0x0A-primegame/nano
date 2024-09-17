@@ -1,0 +1,8 @@
+def my_function():
+    length_of_list = 10
+    list_elements = [1, 2, 3]
+    return (length_of_list, list_elements)
+
+result = my_function()
+print(result)
+
