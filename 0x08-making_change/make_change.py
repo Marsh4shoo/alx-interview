@@ -49,3 +49,4 @@ print(makeChange([1], 0))         # Should return 0 (0 coins needed for 0 total)
 print(makeChange([1, 5, 10, 25], 30))  # Should return 2 (30 = 25 + 5)
 >>>>>>> 0af2842a7538931dc1a8967c15ebcde466767de4
 
+-- INSERT --                                                                                                                                                                         2,1           All
