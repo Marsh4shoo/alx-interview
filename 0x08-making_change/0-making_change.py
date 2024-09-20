@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def makeChange(coins, total):
     """
     Determine the fewest number of coins needed to meet a given amount total.
@@ -17,5 +18,14 @@ def makeChange(coins, total):
     # Iterate through each coin
     for coin in coins:
         # Update the dp array for each amount that can be reached by the current coin
-        for amount in
+        for amount in range(coin, total + 1):
+            dp[amount] = min(dp[amount], dp[amount - coin] + 1)
+
+    # If dp[total] is still infinity, it means the total cannot be made with the given coins
+    return dp[total] if dp[total] != float('inf') else -1
+
+# Example usage:
+coins = [1, 2, 5]
+total = 11
+print(makeChange(coins, total))  # Output should be 3, as [5, 5, 1] is the optimal solution
 
