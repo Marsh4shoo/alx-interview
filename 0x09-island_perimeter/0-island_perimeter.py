@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-
 """
 Returns the perimeter of the island described in the grid.
 :param grid: List of list of integers representing the grid
 :return: Integer perimeter of the island
 """
-
 def island_perimeter(grid):
    
     rows = len(grid)             # Number of rows in the grid
