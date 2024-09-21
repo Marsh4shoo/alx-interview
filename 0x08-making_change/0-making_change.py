@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 
-def makeChange(coins, total):
-    """
+   """
     Determine the fewest number of coins needed to meet a given amount total.
 
     :param coins: List of integers representing coin denominations.
     :param total: Integer, the total amount to make change for.
     :return: Minimum number of coins needed to meet the total, or -1 if not possible.
     """
+
+def makeChange(coins, total):
+ 
     if total <= 0:
         return 0
 
@@ -23,9 +25,3 @@ def makeChange(coins, total):
 
     # If dp[total] is still infinity, it means the total cannot be made with the given coins
     return dp[total] if dp[total] != float('inf') else -1
-
-# Example usage:
-coins = [1, 2, 5]
-total = 11
-print(makeChange(coins, total))  # Output should be 3, as [5, 5, 1] is the optimal solution
-
