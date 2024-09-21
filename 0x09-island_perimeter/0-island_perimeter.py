@@ -4,7 +4,10 @@ Returns the perimeter of the island described in the grid.
 :param grid: List of list of integers representing the grid
 :return: Integer perimeter of the island
 """
-def island_perimeter(grid):   
+def island_perimeter(grid):
+    """
+    Returns the perimeter of the island described in the grid.
+    """
     rows = len(grid)             # Number of rows in the grid
     cols = len(grid[0])          # Number of columns in the grid
     perimeter = 0                # Initialize the perimeter counter
