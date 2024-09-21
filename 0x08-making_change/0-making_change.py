@@ -1,12 +1,11 @@
 #!/usr/bin/python3
+"""
+Determine the fewest number of coins needed to meet a given amount total.
 
-   """
-    Determine the fewest number of coins needed to meet a given amount total.
-
-    :param coins: List of integers representing coin denominations.
-    :param total: Integer, the total amount to make change for.
-    :return: Minimum number of coins needed to meet the total, or -1 if not possible.
-    """
+:param coins: List of integers representing coin denominations.
+:param total: Integer, the total amount to make change for.
+:return: Minimum number of coins needed to meet the total, or -1 if not possible.
+"""
 
 def makeChange(coins, total):
  
