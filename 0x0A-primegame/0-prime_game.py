@@ -1,23 +1,24 @@
 #!/usr/bin/python3
 """
-    Determines the winner of a game played by Maria and Ben.
+Determines the winner of a game played by Maria and Ben.
 
-    Args:
-    x (int): The number of rounds.
-    nums (list): An array of n values, where each n represents the upper bound of the consecutive integers [1, n].
+Args:
+x (int): The number of rounds.
+nums (list): An array of n values, where each n represents the upper bound of the consecutive integers [1, n].
 
-    Returns:
-    str: Name of the player with the most wins ('Maria' or 'Ben'). If it's a tie, returns None.
-    """
+Returns:
+str: Name of the player with the most wins ('Maria' or 'Ben'). If it's a tie, returns None.
+"""
 
 def isWinner(x, nums):
     """
-    Helper function to generate prime numbers up to max_n using the Sieve of Eratosthenes
-"""
+    Determines the winner of the prime game between Maria and Ben.
+    """
     def sieve_of_eratosthenes(max_n):
+        """Helper function to generate prime numbers up to max_n using the Sieve of Eratosthenes."""
         primes = [True] * (max_n + 1)  # Initialize all numbers as potential primes
         primes[0] = primes[1] = False  # 0 and 1 are not primes
-        
+
         for i in range(2, int(max_n**0.5) + 1):
             if primes[i]:
                 for j in range(i * i, max_n + 1, i):
@@ -53,10 +54,11 @@ def isWinner(x, nums):
         else:
             ben_wins += 1
 
-    # Determine the overall winner based on the most wins
+    # Determine the overall winner
     if maria_wins > ben_wins:
         return "Maria"
     elif ben_wins > maria_wins:
         return "Ben"
     else:
         return None
+
